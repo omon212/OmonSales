@@ -42,15 +42,18 @@ export function Fleet() {
     <section id="transportlar" className="py-24 bg-secondary-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-h2 text-primary-text mb-4">Bizning transportlar</h2>
+          <h2 className="text-h2 text-primary-text mb-4">
+            Bizning transportlar
+          </h2>
           <p className="text-body text-secondary-text max-w-2xl mx-auto">
-            Har qanday turdagi yuklar uchun mos keladigan zamonaviy va ishonchli transport vositalari.
+            Har qanday turdagi yuklar uchun mos keladigan zamonaviy va ishonchli
+            transport vositalari.
           </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-6">
           {fleet.map((item, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -61,9 +64,13 @@ export function Fleet() {
               <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
                 <Truck size={24} />
               </div>
-              <h3 className="text-button text-primary-text mb-2">{item.title}</h3>
-              <p className="text-small text-secondary-text mb-6 flex-grow">{item.desc}</p>
-              <button 
+              <h3 className="text-button text-primary-text mb-2">
+                {item.title}
+              </h3>
+              <p className="text-small text-secondary-text mb-6 flex-grow">
+                {item.desc}
+              </p>
+              <button
                 onClick={scrollToForm}
                 className="w-full py-2.5 rounded-xl border border-primary text-primary font-medium hover:bg-primary hover:text-white transition-colors flex items-center justify-center gap-2 mt-auto"
               >
@@ -75,11 +82,11 @@ export function Fleet() {
         </div>
 
         <div className="mt-16 text-center">
-          <button 
+          <button
             onClick={scrollToForm}
             className="bg-primary text-white px-8 py-4 rounded-xl text-button hover:bg-primary/90 transition-all shadow-md hover:shadow-lg inline-flex items-center justify-center"
           >
-            Ro'yxatdan o'tish
+            Xizmatdan foydalanish
           </button>
         </div>
       </div>

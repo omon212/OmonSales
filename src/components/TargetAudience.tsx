@@ -38,18 +38,20 @@ export function TargetAudience() {
   return (
     <section id="sharhlar" className="py-24 bg-main-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Target Audience */}
         <div className="text-center mb-16">
-          <h2 className="text-h2 text-primary-text mb-4">Kimlar uchun xizmat ko'rsatamiz?</h2>
+          <h2 className="text-h2 text-primary-text mb-4">
+            Kimlar uchun xizmat ko'rsatamiz?
+          </h2>
           <p className="text-body text-secondary-text max-w-2xl mx-auto">
-            Biz barcha turdagi mijozlar uchun moslashuvchan va ishonchli logistika yechimlarini taklif etamiz.
+            Biz barcha turdagi mijozlar uchun moslashuvchan va ishonchli
+            logistika yechimlarini taklif etamiz.
           </p>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
           {targets.map((item, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +74,7 @@ export function TargetAudience() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((item, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -94,7 +96,9 @@ export function TargetAudience() {
                 </div>
                 <div>
                   <h4 className="text-button text-primary-text">{item.name}</h4>
-                  <p className="text-caption text-secondary-text">{item.company}</p>
+                  <p className="text-caption text-secondary-text">
+                    {item.company}
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -102,14 +106,13 @@ export function TargetAudience() {
         </div>
 
         <div className="mt-16 text-center">
-          <button 
+          <button
             onClick={scrollToForm}
             className="bg-primary text-white px-8 py-4 rounded-xl text-button hover:bg-primary/90 transition-all shadow-md hover:shadow-lg inline-flex items-center justify-center"
           >
-            Ro'yxatdan o'tish
+            Xizmatdan foydalanish
           </button>
         </div>
-
       </div>
     </section>
   );
